@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <style>
+    /* Soft Unicorn Gradient Background */
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ffecf2, #e0c3fc, #d8f3dc, #c1e1ff);
+        background-size: 300% 300%;
+        animation: bgAnimation 8s ease infinite;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    @keyframes bgAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+        margin-top: 100px;
+        color: #555;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+        text-align: center;
+    }
+
+    .container {
+        background: white;
+        width: 400px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        border: 2px solid #ffd1dc;
+        color: #666;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        color: #b19cd9; /* Pastel Lavender */
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background-color: #ffdde1;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #555;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ffd1dc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Form</h1>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
